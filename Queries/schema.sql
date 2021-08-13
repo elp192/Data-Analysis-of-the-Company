@@ -187,7 +187,7 @@ INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
 
 --Created retirement_titles table
-Drop TABLE retirement_titles;
+--Drop TABLE retirement_titles;
 SELECT e.emp_no,
        e.first_name, 
        e.last_name,
@@ -212,12 +212,12 @@ FROM retirement_titles as rt
 ORDER BY emp_no, to_date DESC
 
 --Created retiring_titles 
-SELECT count(ut.title), 
+SELECT COUNT(ut.title), 
              ut.title
 INTO retiring_titles 
 FROM unique_titles as ut
 GROUP BY ut.title
-ORDER BY count(ut.title) DESC
+ORDER BY COUNT(ut.title) DESC
 
 --Created mentorship_eligibilty table (employees eligible for the mentorship program)
 SELECT DISTINCT ON (e.emp_no)
@@ -255,3 +255,4 @@ SELECT COUNT (me.title),
 INTO mentorship_eligibilty_count
 FROM mentorship_eligibilty as me
 GROUP BY (me.title)
+ORDER BY COUNT (me.title)
