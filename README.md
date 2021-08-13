@@ -54,7 +54,7 @@ To eliminate the duplicates rows that result from changing job position of some 
 <p img align="center" width="100%">
 <img width="120" alt="retiring_titles" src="https://user-images.githubusercontent.com/85843401/129268355-19c45b79-bb5b-4529-b89f-0ed85da81723.png">
 <img width="200" alt="retiring_titles_SQLcode" src="https://user-images.githubusercontent.com/85843401/129375080-e23e0513-90c8-442b-8f30-b4349337b9a3.png">
-<figcaption>Figure 4: Demonstration of Left) retiring titles table and Right) SQL code. </figcaption></figure/> 
+<figcaption>Figure 4: Demonstration of left) retiring titles table and right) SQL code. </figcaption></figure/> 
 <p align="center">
 </p>
 
@@ -66,7 +66,7 @@ To eliminate the duplicates rows that result from changing job position of some 
 <p img align="center" width="100%">
 <img width="300" alt="mentorship eligibility" src="https://user-images.githubusercontent.com/85843401/129268843-13ab9c3c-92ba-406c-9e63-f219547f9ae0.png">
 <img width="200" alt="mentorship_eligibility tale_SQLcode" src="https://user-images.githubusercontent.com/85843401/129375731-e2559f60-0d78-4475-93a9-2c0bf7364b12.png">
-<figcaption>Figure 5: Demonstration of Left) mentorship eligibility table and Right) SQL code.  
+<figcaption>Figure 5: Demonstration of left) mentorship eligibility table and right) SQL code.  
 </figcaption></figure/> 
 <p align="center">
 </p>
