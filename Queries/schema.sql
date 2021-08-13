@@ -248,3 +248,10 @@ INNER JOIN dept_info as di
 ON (ut.emp_no=di.emp_no)
 GROUP BY ut.title, di.dept_name
 ORDER BY COUNT (ut.title)
+
+-- Number of eligible member for mentorship program table
+SELECT COUNT (me.title),
+             me.title
+INTO mentorship_eligibilty_count
+FROM mentorship_eligibilty as me
+GROUP BY (me.title)
