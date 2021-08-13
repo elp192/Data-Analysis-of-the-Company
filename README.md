@@ -21,7 +21,7 @@ PostgreSQL is used as an object-relational database system, and PgAdmin is utili
 In the following created tables determining the eligible employees for retirement and participation in the mentorship program are demonstrated.
 
 **Retirement titles table** (Figure 2):<br>
-- This table is created by merging the employees and title tables (using INNER JOIN).<br>
+- This table is created by merging the employees and title tables (using INNER JOIN statement).<br>
 - This table provides the employees' information who will be retired in the upcoming years (employees born between 1-1-1952 and 31-12-1955).<br>
 - This table consists of 133777 rows and 6 columns.<br>
 - Some employees have more than one job title because of changing the job position during years.
@@ -32,5 +32,31 @@ In the following created tables determining the eligible employees for retiremen
 <figcaption>Figure 2: Demonstration of left) retirement titles table and right) SQL code.</figcaption></figure/>
 <p align="center">
 </p>
+
+**Unique titles table** (Figure 3):<br>
+To eliminate the duplicates rows that result from changing job position of some employees, unique titles table is created. 
+- In this table the real number of employees who will be ready for retirement is dmeonstrated.
+- The rows (number of retiring employees) is reduced to 90,398 rows.
+- DISTINCT_ON statement is used to uniquely select the employees. 
+- The table is sorted (using ORDER BY statement) by emp_no (ascending order) and to_date (descending order). So, the table shows the most recent titles of employees.
+<p img align="center" width="100%">
+<img width="250" alt="unique_titles" src="https://user-images.githubusercontent.com/85843401/129268047-aa27cd24-33ff-4af7-b4c0-5646f4193276.png">
+<img width="200" alt="unique_titles_SQLcode" src="https://user-images.githubusercontent.com/85843401/129374663-aedf3ce8-62c0-4a2f-b094-3e86bf538643.png">
+<figcaption>Figure 3: Demonstration of left) unique titles table and right) SQL code. </figcaption></figure/> 
+<p align="center">
+</p>
+
+**Retiring titles table** (Figure 4)<br>
+- In this table, the job titles that their employees will be retired are determined. Also, the number of employees for each title is counted. 
+- 7 job titles are recognized in this company that their employees will be retired soon.
+- The two highest number of future retired employees are the senior engineer and senior staff (29414 and 28254 employees).
+- Only 2 positions with manager title will be vacant in the next few years.
+<p img align="center" width="100%">
+<img width="120" alt="retiring_titles" src="https://user-images.githubusercontent.com/85843401/129268355-19c45b79-bb5b-4529-b89f-0ed85da81723.png">
+<img width="200" alt="retiring_titles_SQLcode" src="https://user-images.githubusercontent.com/85843401/129375080-e23e0513-90c8-442b-8f30-b4349337b9a3.png">
+<figcaption>Figure 4: Demonstration of Left) retiring titles table and Right) SQL code. </figcaption></figure/> 
+<p align="center">
+</p>
+
 
 
