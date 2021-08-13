@@ -237,3 +237,14 @@ ON (e.emp_no=ti.emp_no)
 WHERE de.to_date=('9999-01-01') AND
 	(e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY e.emp_no
+
+-- Vacant job title and department table
+SELECT ut.title,
+       di.dept_name,
+     COUNT (ut.title)
+INTO vacant_job_titles_department
+FROM unique_titles as ut
+INNER JOIN dept_info as di
+ON (ut.emp_no=di.emp_no)
+GROUP BY ut.title, di.dept_name
+ORDER BY COUNT (ut.title)
