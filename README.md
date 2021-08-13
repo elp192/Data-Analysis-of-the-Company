@@ -1,8 +1,8 @@
 # Data Analysis of Large Company 
-# Overview of Project
-## Background
+## Overview of Project
+### Background
 The database consists of six .csv files ([department](https://github.com/elp192/Pewlett-Hackard-Analysis/blob/7c562f62adee8a1efa754a05779b5df5a674cec0/Data/departments.csv), [dept_emp](https://github.com/elp192/Pewlett-Hackard-Analysis/blob/7c562f62adee8a1efa754a05779b5df5a674cec0/Data/dept_emp.csv), [dept_manager](https://github.com/elp192/Pewlett-Hackard-Analysis/blob/7c562f62adee8a1efa754a05779b5df5a674cec0/Data/dept_manager.csv), [employees](https://github.com/elp192/Pewlett-Hackard-Analysis/blob/7c562f62adee8a1efa754a05779b5df5a674cec0/Data/employees.csv), [salaries](https://github.com/elp192/Pewlett-Hackard-Analysis/blob/7c562f62adee8a1efa754a05779b5df5a674cec0/Data/salaries.csv), and [titles](https://github.com/elp192/Pewlett-Hackard-Analysis/blob/7c562f62adee8a1efa754a05779b5df5a674cec0/Data/titles.csv)) which provide information about department number, department name, employee number, the date of hire, the birth date of employees, salaries, and so on. QuickDBD is used to visually demonstrate the relational database (Figure 1). 
-## Purpose
+### Purpose
 This project aims to provide insight into the retirement aspect of employees in the Pewlett-Hackard company. In this large company, many employees are going to be retired in the next few years. So, data analysis is necessary to do thoughtful planning for the future. For example, we want to determine the following items:<br> 
 - The number of employees per job title who will be retired,<br>
 - Infomration about eligible employees for the mentorship program,<br> 
@@ -17,7 +17,7 @@ PostgreSQL is used as an object-relational database system, and PgAdmin is utili
 <p align="center">
 </p>
 
-# Result
+## Result
 In the following created tables determining the eligible employees for retirement and participation in the mentorship program are demonstrated.
 
 **Retirement titles table** (Figure 2):<br>
@@ -71,5 +71,30 @@ To eliminate the duplicates rows that result from changing job position of some 
 <p align="center">
 </p>
 
+## Summary
+In this section, two important questions will be discussed: what is the number of roles that need to be filled and whether we have qualified members for leading the next generation of employees or not. In doing so, vacant job titles and related departments are determined. Also, eligible employees for mentorship are counted and can be compared to the number of vacant jobs.
+
+**Vacant job title and department table** (Figure 6):<br>
+- This table shows that 39 job titles in different departments need to be filled in the next few years.<br>
+ - The total number of jobs in different departments that need to be filled is 36619.<br>
+ - The highest number of employees that should be hired is in the development department and for senior engineer positions (6834 employees).<br>
+ - The lowest number of employees that need to be hired is in the research and sale department and for manager positions (1 employee).
+
+<p img align="center" width="100%">
+ <img width="200" alt="vacant_job_title_department" src="https://user-images.githubusercontent.com/85843401/129385824-51da27e7-024e-41a8-b16a-b6379b2d6103.png">
+<img width="200" alt="vacant_job_title_department_SQLcode" src="https://user-images.githubusercontent.com/85843401/129385835-3520ba2e-2dc8-45e9-b9c4-239bcf8165ed.png">
+<figcaption>Figure 6: Demonstration of left) vacant job title and department table and right) SQL code.</figcaption></figure/> 
+<p align="center">
+
+**Number of eligible employees for mentorship program table** (Figure 7): <br>
+- This table is created using the information obtained from the mentorship eligibility table.
+- The total number of qualified employees for leading the next generation is 1549. Out of this number, 779 employees have higher positions (i.e., manager, senior, and technical leader) which be necessary to guide the new employees.
+- The highest number of qualified employees for mentorship is related to senior staff positions (397 employees).<br>
 
 
+  
+ <p img align="center" width="100%">
+<img width="150" alt="counted_eligible_mentorship" src="https://user-images.githubusercontent.com/85843401/129405788-ea56dd8f-54fc-445a-9118-5b889d25ea2d.png">
+<img width="200" alt="counted_eligible_mentorship_SQLcode" src="https://user-images.githubusercontent.com/85843401/129405793-8b5b08ab-7d1b-4971-8c6c-8167473cd015.png">
+<figcaption>Figure 7: Demonstration of left) number of eligible employees for mentorship program table and right) SQL code.</figcaption></figure/> 
+<p align="center">
