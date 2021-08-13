@@ -21,7 +21,7 @@ PostgreSQL is used as an object-relational database system, and PgAdmin is utili
 In the following created tables determining the eligible employees for retirement and participation in the mentorship program are demonstrated.
 
 **Retirement titles table** (Figure 2):<br>
-- This table is created by merging the employees and title tables (using INNER JOIN statement).<br>
+- This table is created by merging the employees and title tables (using ```INNER JOIN ``` statement).<br>
 - This table provides the employees' information who will be retired in the upcoming years (employees born between 1-1-1952 and 31-12-1955).<br>
 - This table consists of 133777 rows and 6 columns.<br>
 - Some employees have more than one job title because of changing the job position during years.
@@ -37,8 +37,8 @@ In the following created tables determining the eligible employees for retiremen
 To eliminate the duplicates rows that result from changing job position of some employees, unique titles table is created. 
 - In this table the real number of employees who will be ready for retirement is dmeonstrated.
 - The rows (number of retiring employees) is reduced to 90,398 rows.
-- DISTINCT_ON statement is used to uniquely select the employees. 
-- The table is sorted (using ORDER BY statement) by emp_no (ascending order) and to_date (descending order). So, the table shows the most recent titles of employees.
+- ```DISTINCT_ON ``` statement is used to uniquely select the employees. 
+- The table is sorted (using ```ORDER BY ``` statement) by emp_no (ascending order) and to_date (descending order). So, the table shows the most recent titles of employees.
 <p img align="center" width="100%">
 <img width="250" alt="unique_titles" src="https://user-images.githubusercontent.com/85843401/129268047-aa27cd24-33ff-4af7-b4c0-5646f4193276.png">
 <img width="200" alt="unique_titles_SQLcode" src="https://user-images.githubusercontent.com/85843401/129374663-aedf3ce8-62c0-4a2f-b094-3e86bf538643.png">
@@ -60,7 +60,7 @@ To eliminate the duplicates rows that result from changing job position of some 
 
 **Mentorship eligibility table** (Figure 5):<br>
 - This table represents the number of employees who will be retired soon and are eligible for mentoring new employees in the mentorship program.
-- This table is created using merging employees, titles, and dept_emp tables (using INNER JOIN statement). Also, duplication is eliminated using the DISTINCT ON statement, and the table is filtered by birth date (using WHERE statement).
+- This table is created using merging employees, titles, and dept_emp tables (using ```INNER JOIN``` statement). Also, duplication is eliminated using the ```DISTINCT ON``` statement, and the table is filtered by birth date (using ```WHERE``` statement).
 - 1549 (number of rows) employees were born in 1965 and are eligible to be leaders in the mentorship program. 
 
 <p img align="center" width="100%">
