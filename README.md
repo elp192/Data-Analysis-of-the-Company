@@ -46,7 +46,7 @@ To eliminate the duplicates rows that result from changing job position of some 
 <p align="center">
 </p>
 
-**Retiring titles table** (Figure 4)<br>
+**Retiring titles table** (Figure 4):<br>
 - In this table, the job titles that their employees will be retired are determined. Also, the number of employees for each title is counted. 
 - 7 job titles are recognized in this company that their employees will be retired soon.
 - The two highest number of future retired employees are the senior engineer and senior staff (29414 and 28254 employees).
@@ -55,6 +55,19 @@ To eliminate the duplicates rows that result from changing job position of some 
 <img width="120" alt="retiring_titles" src="https://user-images.githubusercontent.com/85843401/129268355-19c45b79-bb5b-4529-b89f-0ed85da81723.png">
 <img width="200" alt="retiring_titles_SQLcode" src="https://user-images.githubusercontent.com/85843401/129375080-e23e0513-90c8-442b-8f30-b4349337b9a3.png">
 <figcaption>Figure 4: Demonstration of Left) retiring titles table and Right) SQL code. </figcaption></figure/> 
+<p align="center">
+</p>
+
+**Mentorship eligibility table** (Figure 5):<br>
+- This table represents the number of employees who will be retired soon and are eligible for mentoring new employees in the mentorship program.
+- This table is created using merging employees, titles, and dept_emp tables (using INNER JOIN statement). Also, duplication is eliminated using the DISTINCT ON statement, and the table is filtered by birth date (using WHERE statement).
+- 1549 (number of rows) employees were born in 1965 and are eligible to be leaders in the mentorship program. 
+
+<p img align="center" width="100%">
+<img width="300" alt="mentorship eligibility" src="https://user-images.githubusercontent.com/85843401/129268843-13ab9c3c-92ba-406c-9e63-f219547f9ae0.png">
+<img width="200" alt="mentorship_eligibility tale_SQLcode" src="https://user-images.githubusercontent.com/85843401/129375731-e2559f60-0d78-4475-93a9-2c0bf7364b12.png">
+<figcaption>Figure 5: Demonstration of Left) mentorship eligibility table and Right) SQL code.  
+</figcaption></figure/> 
 <p align="center">
 </p>
 
